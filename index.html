@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Recipe Hub</title> 
+<link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+<header id="navbar"> 
+<h2>             Recipe Hub</h2> 
+    <nav> 
+        <a href="#home">Home</a> 
+        <a href="#recipes">Recipes</a> 
+        <a href="#add">Add</a> 
+    </nav> 
+</header> 
+ 
+<!-- HERO --> 
+<section id="home" class="hero"> 
+    <div class="hero-container"> 
+ 
+        <div class="hero-text"> 
+            <h1>Cook Something Amazing    </h1> 
+            <p>Discover & Share Delicious Recipes</p> 
+            <a href="#recipes" class="btn">Explore Recipes</a> 
+        </div> 
+ 
+        <div class="hero-image"> 
+            <img src="chef.jpg"> 
+        </div> 
+ 
+    </div> 
+</section> 
+ 
+<!-- RECIPES --> 
+<section id="recipes"> 
+    <h2>Recipes</h2> 
+    <div class="grid" id="recipe-list"></div> 
+</section> 
+ 
+<!-- ADD --> 
+<section id="add"> 
+    <h2>Add Recipe</h2> 
+    <form onsubmit="addRecipe(event)"> 
+        <input type="text" id="name" placeholder="Recipe Name" required> 
+        <input type="file" id="image" required> 
+        <textarea id="ingredients" placeholder="Ingredients" required></textarea> 
+        <textarea id="steps" placeholder="Steps" required></textarea> 
+        <button>Add Recipe</button> 
+    </form> 
+</section> 
+ 
+<!-- POPUP --> 
+<div id="popup" class="popup"> 
+    <div class="popup-box"> 
+        <span onclick="closePopup()">✖</span> 
+        <h2 id="popup-title"></h2> 
+        <p id="popup-ingredients"></p> 
+        <p id="popup-steps"></p> 
+</div> 
+</div> 
+<script src="script.js"></script> 
+</body> 
+</html>
